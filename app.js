@@ -34,25 +34,25 @@ app.get("/", (req, res) => {
 });
 
 // app.get("/addJobs",async (req,res)=>{
-  // await Job.deleteMany({})
+//   await Job.deleteMany({})
 //   let data = await Job.insertMany(jobs);
 //   console.log(data);
 //   res.send("Done!")
 // });
 
-app.get("/addUsers",async(req,res)=>{
-  await User.deleteMany({})
-  let data = await User.insertMany(users);
-  console.log(data)
-  res.send("Added Users!")
-})
+// app.get("/addUsers",async(req,res)=>{
+//   await User.deleteMany({})
+//   let data = await User.insertMany(users);
+//   console.log(data)
+//   res.send("Added Users!")
+// })
 
-app.get("/addApplications",async(req,res)=>{
-  await Application.deleteMany({})
-   let data = Application.insertMany(applications)
-   console.log(data)
-   res.send("Added Applications!")
-})
+// app.get("/addApplications",async(req,res)=>{
+//   await Application.deleteMany({})
+//    let data = Application.insertMany(applications)
+//    console.log(data)
+//    res.send("Added Applications!")
+// })
 
 // Start server
 const PORT = process.env.PORT || 5000;
