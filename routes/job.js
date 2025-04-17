@@ -13,6 +13,6 @@ router.get("/", getAllJobs);
 router.get("/:id", getJobById);
 router.post("/", protect, createJob);
 router.put("/:id", protect, updateJob);
-router.delete("/:id", protect, deleteJob);
+router.delete("/:id", deleteJob);
 
 export default router;
