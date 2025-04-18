@@ -48,25 +48,6 @@ export const updateJob = async (req, res) => {
     if (job.postedBy.toString() !== req.user._id.toString()) {
       return res.status(403).json({ message: "Not authorized" });
     }
-<<<<<<< HEAD
-  };
-  
-  export const deleteJob = async (req, res) => {
-    try {
-      const { id } = req.params;
-      const job = await Job.findById(req.params.id);
-      if (!job) return res.status(404).json({ message: "Job not found" });
-      // if (job.postedBy.toString() !== req.user._id.toString()) {
-      //   return res.status(403).json({ message: "Not authorized" });
-      // }
-  
-      const delJobs = await Job.findByIdAndDelete(id);
-      res.status(200).json({ message: "Job deleted", job: delJobs });
-    } catch (err) {
-      res.status(500).json({ message:err});
-    }
-  };
-=======
 
     const updated = await Job.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -92,4 +73,3 @@ export const deleteJob = async (req, res) => {
     res.status(500).json({ message: err });
   }
 };
->>>>>>> 5ce13650835cf8faa557bcb13c8396487d6d787c
